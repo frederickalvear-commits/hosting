@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard - Consultorio Médico</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header>
+  <h1>Consultorio Médico Empresarial</h1>
+</header>
+
+<nav id="menu">
+  <a href="#" data-section="pacientes">Pacientes</a>
+  <a href="#" data-section="inventario">Inventario</a>
+  <a href="#" data-section="entregas">Entregas</a>
+  <a href="#" data-section="historia">Historia Médica</a>
+  <a href="#" data-section="descanso">Descanso Médico</a>
+  <a href="#" id="btnSalir" style="cursor:pointer;">Salir</a>
+</nav>
+
+<!-- ============================
+     SECCIÓN PACIENTES
+=============================== -->
+<section id="pacientes" class="active">
+  <h2>Registro de Pacientes</h2>
+
+  <form id="formPacientes">
+    <input id="nombrePaciente" type="text" placeholder="Nombre completo">
+    <input id="cedulaPaciente" type="text" placeholder="Cédula">
+    <input id="edadPaciente" type="number" placeholder="Edad">
+    <textarea id="diagnostico" placeholder="Diagnóstico"></textarea>
+    <button type="submit">Guardar Paciente</button>
+  </form>
+
+  <table id="tablaPacientes"></table>
+</section>
+
+<!-- ============================
+     SECCIÓN INVENTARIO
+=============================== -->
+<section id="inventario">
+  <h2>Inventario de Medicinas</h2>
+
+  <form id="formMedicinas">
+    <input id="nombreMedicina" type="text" placeholder="Nombre de medicina">
+    <input id="cantidad" type="number" placeholder="Cantidad">
+    <button type="submit">Agregar / Actualizar</button>
+  </form>
+
+  <table id="tablaMedicinas">
+    <thead>
+      <tr><th>Nombre</th><th>Cantidad</th><th>Acción</th></tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</section>
+
+<!-- ============================
+     SECCIÓN ENTREGAS
+=============================== -->
+<section id="entregas">
+  <h2>Entrega de Medicinas</h2>
+
+  <form id="formEntrega">
+    <select id="medicinaEntrega"></select>
+    <select id="pacienteEntrega"></select>
+    <input id="cantidadEntrega" type="number" placeholder="Cantidad">
+    <button type="submit">Registrar Entrega</button>
+  </form>
+
+  <table id="tablaEntregas">
+    <thead>
+      <tr><th>Fecha</th><th>Medicina</th><th>Paciente</th><th>Cantidad</th></tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</section>
+
+<!-- ============================
+     SECCIÓN HISTORIA MÉDICA
+=============================== -->
+<section id="historia">
+  <h2>Historia Médica</h2>
+
+  <form id="formHistoria">
+    <select id="pacienteHistoria"></select>
+    <textarea id="detalleHistoria" placeholder="Detalle médico"></textarea>
+    <button type="submit">Guardar</button>
+  </form>
+
+  <button id="btnReporteHistoria">Imprimir Reporte</button>
+
+  <table id="tablaHistoria">
+    <thead>
+      <tr><th>Fecha</th><th>Paciente</th><th>Detalle</th></tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</section>
+
+<!-- ============================
+     SECCIÓN DESCANSO MÉDICO
+=============================== -->
+<section id="descanso">
+  <h2>Descanso Médico</h2>
+
+  <form id="formDescanso">
+    <input id="pacienteDescanso" type="text" placeholder="Nombre del paciente">
+    <input id="correoJefe" type="email" placeholder="Correo del jefe">
+    <label>Desde:</label>
+    <input id="inicioDescanso" type="date">
+    <label>Hasta:</label>
+    <input id="finDescanso" type="date">
+    <textarea id="motivoDescanso" placeholder="Motivo"></textarea>
+    <button type="submit">Enviar Descanso</button>
+  </form>
+
+  <p id="mensajeCorreo"></p>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
