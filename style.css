@@ -1,0 +1,105 @@
+/*
+ * author Saquib Shaikh
+ * created on 11-11-2025-18h-16m
+ * github: https://github.com/saquibshaikh14
+ * copyright 2025
+*/
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #e8f0fe;
+}
+
+header {
+  background-color: #0a5ed7;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+/* NAV */
+nav {
+  background: #094bb3;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding: 12px;
+}
+
+nav a {
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* CONTENIDO */
+section {
+  display: none;
+  width: 90%;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 8px #0a5ed7;
+}
+
+section.active {
+  display: block;
+}
+
+input, textarea, select, button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background: #0a5ed7;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #003e8a;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background: #0a5ed7;
+  color: white;
+}
+
+/* LOGIN */
+#login {
+  width: 320px;
+  margin: 100px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #aaa;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+}
